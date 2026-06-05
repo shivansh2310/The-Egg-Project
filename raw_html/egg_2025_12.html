@@ -1,0 +1,202 @@
+ <html>
+ <script language="javascript" type="text/javascript">
+    function printing()
+    {
+        bdhtml=window.document.body.innerHTML;
+        sprnstr="<!--startprint-->";
+        eprnstr="<!--endprint-->";
+        prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);
+        prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));
+        window.document.body.innerHTML=prnhtml;
+        window.print();
+        return false;
+    }
+    </script>
+</head>
+<body style="margin: 0px; margin-left: 10px; margin-right: 10px; padding: 0px;">
+    <div id="Div1" class="HeaderBar" style="border: solid black 1;">
+       
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 95%">
+            <tr>
+                <td align="center" style="width: 100%; height: 34px;">
+                    <h3>NATIONAL EGG CO-ORDINATION COMMITTEE</h3>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="width: 100%; height: 10px;">
+                    <h5>DAILY/MONTHLY EGG PRICES SUGGESTED BY NECC AND PREVAILING PRICES AT VARIOUS  PRODUCTION CENTRES (PC) AND CONSUMPTION CENTRE (CC)<br>
+                    
+                    (“The daily egg prices suggested by NECC, on its official website or through any other medium (including verbal, print and digital media) are merely suggestive and not mandatory. The suggested prices are published solely for the reference and information of the trade and industry. NECC does not by itself or through any person enforce compliance or adherence with such suggested egg prices in any manner whatsoever.If any person not authorized by NECC chooses to disseminate NECC suggested prices through any medium, such person must also include the above clarification while disseminating NECC suggested prices of eggs.”)</h5><br><br><br><br><br><br><br><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%" align="right" style="padding-right:5px;">
+                   &nbsp; &nbsp;<a id="NECCHomePageLink" href="https://www.e2necc.com/home/index">Home Page</a>
+                </td>
+            </tr>
+        </table>
+		<div id="Panel1" class="Panel" style="width:980px;z-index: 100;
+            left: 50px; position: absolute; top: 120px;background-color: #F9F9F9;border: solid #AAAAAA 1px;">
+	
+            <div id="divPage">
+                <table style="width: 856px">
+                    <form action="https://www.e2necc.com/home/eggprice" method="Post" class="form-group">
+                        <tr>
+                            <th class="Label">
+                                Month :
+                            </th>
+                            <td class="ComboBox" style="width: 193px">
+                                <select name="ddlMonth" id="ddlMonth" style="width:135px;">
+                                                                            <option   value="01">01</option>
+                                                                            <option   value="02">02</option>
+                                                                            <option   value="03">03</option>
+                                                                            <option   value="04">04</option>
+                                                                            <option   value="05">05</option>
+                                                                            <option   value="06">06</option>
+                                                                            <option   value="07">07</option>
+                                                                            <option   value="08">08</option>
+                                                                            <option   value="09">09</option>
+                                                                            <option   value="10">10</option>
+                                                                            <option   value="11">11</option>
+                                                                            <option selected="selected" value="12">12</option>
+                                                                    
+                                </select>
+                            </td>
+                            <th class="Label">
+                                Year :
+                            </th>
+                            <td class="ComboBox">
+                                <select name="ddlYear" id="ddlYear" style="width:135px;">
+                                                                            <option   value='2026'>2026</option>
+                                                                            <option selected="selected" value='2025'>2025</option>
+                                                                            <option   value='2024'>2024</option>
+                                                                            <option   value='2023'>2023</option>
+                                                                            <option   value='2022'>2022</option>
+                                                                            <option   value='2021'>2021</option>
+                                                                            <option   value='2020'>2020</option>
+                                                                            <option   value='2019'>2019</option>
+                                                                            <option   value='2018'>2018</option>
+                                                                            <option   value='2017'>2017</option>
+                                                                            <option   value='2016'>2016</option>
+                                                                            <option   value='2015'>2015</option>
+                                                                            <option   value='2014'>2014</option>
+                                                                            <option   value='2013'>2013</option>
+                                                                            <option   value='2012'>2012</option>
+                                                                            <option   value='2011'>2011</option>
+                                                                            <option   value='2010'>2010</option>
+                                                                            <option   value='2009'>2009</option>
+                                                                    </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="Label" style="height: 9px">Select Type Of Sheet </th>
+                            <td style="width: 192px; height: 9px">
+                                <span id="rblReportType" style="display:inline-block;font-size:Smaller;width:168px;">
+                                    <input onclick="document.getElementById('ddlMonth').disabled = false;"  id="ReportType" type="radio" name="rblReportType" value="DailyReport" checked="checked" />
+                                    <label for="rblReportType_0">Daily Rate Sheet</label><br />
+                                    <input onclick="document.getElementById('ddlMonth').disabled = true;" id="ReportType" type="radio" name="rblReportType" value="MonthlyReport"  />
+                                    <label for="rblReportType_1">Monthly Avg. Sheet</label>
+                                </span>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                                <input type="submit" name="btnReport" value="Get Sheet" id="btnReport" />
+                            </td>
+                            <td>
+                                <input type="submit" name="btnPrint" value="Print Sheet" onclick="Javascript:window.print();" id="btnPrint" />
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+			<div id="pan2" class="Panel" style="width:960px;z-index: 100; left: 0px; position: absolute; top: 80px">
+                <table border="1px" width="95%" style="font-size: 10pt; font-family: Arial; ">
+                    <tbody>
+                        <tr align="center">
+                            <th>Name Of Zone / Day</th>
+                            <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th><th>20</th><th>21</th><th>22</th><th>23</th><th>24</th><th>25</th><th>26</th><th>27</th><th>28</th><th>29</th><th>30</th><th>31</th>                            <th>Average</th>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="302 " style="font-weight: bold;  ">NECC SUGGESTED EGG PRICES</td>
+                        </tr>
+                        
+                                                <tr align="center">
+                            <td align='left'>Ahmedabad</td><td>675</td><td>675</td><td>680</td><td>685</td><td>685</td><td>685</td><td>685</td><td>685</td><td>685</td><td>685</td><td>685</td><td>685</td><td>690</td><td>695</td><td>700</td><td>700</td><td>700</td><td>700</td><td>700</td><td>700</td><td>705</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>680</td><td>695.32</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Ajmer</td><td>661</td><td>665</td><td>668</td><td>668</td><td>668</td><td>660</td><td>651</td><td>651</td><td>651</td><td>658</td><td>660</td><td>675</td><td>680</td><td>680</td><td>680</td><td>670</td><td>660</td><td>660</td><td>660</td><td>685</td><td>705</td><td>708</td><td>708</td><td>690</td><td>673</td><td>673</td><td>673</td><td>673</td><td>666</td><td>650</td><td>640</td><td>670.00</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Barwala</td><td>660</td><td>665</td><td>668</td><td>668</td><td>668</td><td>668</td><td>650</td><td>650</td><td>650</td><td>654</td><td>656</td><td>670</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>680</td><td>696</td><td>703</td><td>703</td><td>703</td><td>673</td><td>673</td><td>673</td><td>673</td><td>673</td><td>645</td><td>630</td><td>670.23</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Bengaluru (CC)</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>680</td><td>685</td><td>690</td><td>690</td><td>690</td><td>690</td><td>690</td><td>690</td><td>695</td><td>700</td><td>705</td><td>705</td><td>705</td><td>705</td><td>705</td><td>705</td><td>705</td><td>705</td><td>705</td><td>688.55</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Brahmapur (OD)</td><td>660</td><td>665</td><td>670</td><td>670</td><td>675</td><td>675</td><td>675</td><td>680</td><td>680</td><td>680</td><td>680</td><td>690</td><td>700</td><td>705</td><td>710</td><td>710</td><td>710</td><td>700</td><td>700</td><td>700</td><td>710</td><td>720</td><td>720</td><td>720</td><td>700</td><td>680</td><td>665</td><td>665</td><td>665</td><td>655</td><td>640</td><td>686.29</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Chennai (CC)</td><td>670</td><td>670</td><td>670</td><td>670</td><td>670</td><td>670</td><td>670</td><td>670</td><td>670</td><td>670</td><td>670</td><td>670</td><td>680</td><td>690</td><td>690</td><td>695</td><td>695</td><td>695</td><td>695</td><td>695</td><td>700</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>689.52</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Chittoor</td><td>663</td><td>663</td><td>663</td><td>663</td><td>663</td><td>663</td><td>663</td><td>663</td><td>663</td><td>663</td><td>663</td><td>663</td><td>673</td><td>683</td><td>683</td><td>688</td><td>688</td><td>688</td><td>688</td><td>688</td><td>693</td><td>703</td><td>703</td><td>703</td><td>703</td><td>703</td><td>703</td><td>703</td><td>703</td><td>703</td><td>703</td><td>682.52</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Delhi (CC)</td><td>690</td><td>695</td><td>697</td><td>697</td><td>697</td><td>697</td><td>697</td><td>697</td><td>697</td><td>697</td><td>697</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>750</td><td>750</td><td>750</td><td>750</td><td>750</td><td>750</td><td>730</td><td>700</td><td>700</td><td>700</td><td>680</td><td>711.55</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>E.Godavari</td><td>635</td><td>640</td><td>645</td><td>645</td><td>650</td><td>650</td><td>650</td><td>650</td><td>650</td><td>650</td><td>650</td><td>655</td><td>665</td><td>670</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>680</td><td>690</td><td>695</td><td>695</td><td>695</td><td>665</td><td>665</td><td>665</td><td>665</td><td>665</td><td>620</td><td>663.06</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Hospet</td><td>615</td><td>615</td><td>615</td><td>615</td><td>615</td><td>615</td><td>615</td><td>615</td><td>615</td><td>615</td><td>615</td><td>615</td><td>620</td><td>625</td><td>630</td><td>630</td><td>630</td><td>630</td><td>630</td><td>630</td><td>635</td><td>640</td><td>645</td><td>645</td><td>645</td><td>645</td><td>645</td><td>645</td><td>645</td><td>645</td><td>645</td><td>628.55</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Hyderabad</td><td>635</td><td>640</td><td>645</td><td>651</td><td>651</td><td>651</td><td>651</td><td>651</td><td>651</td><td>651</td><td>651</td><td>651</td><td>656</td><td>661</td><td>666</td><td>671</td><td>671</td><td>671</td><td>650</td><td>650</td><td>660</td><td>670</td><td>675</td><td>675</td><td>675</td><td>675</td><td>650</td><td>650</td><td>650</td><td>650</td><td>630</td><td>655.97</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Jabalpur</td><td>665</td><td>665</td><td>670</td><td>670</td><td>670</td><td>670</td><td>660</td><td>660</td><td>660</td><td>660</td><td>660</td><td>665</td><td>675</td><td>685</td><td>695</td><td>695</td><td>680</td><td>680</td><td>680</td><td>680</td><td>701</td><td>710</td><td>710</td><td>710</td><td>710</td><td>685</td><td>675</td><td>665</td><td>665</td><td>665</td><td>655</td><td>677.29</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Kolkata (WB)</td><td>690</td><td>695</td><td>700</td><td>705</td><td>710</td><td>710</td><td>710</td><td>715</td><td>720</td><td>720</td><td>720</td><td>725</td><td>735</td><td>735</td><td>735</td><td>735</td><td>725</td><td>725</td><td>725</td><td>730</td><td>750</td><td>760</td><td>760</td><td>760</td><td>730</td><td>700</td><td>705</td><td>705</td><td>705</td><td>685</td><td>685</td><td>719.68</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Ludhiana</td><td>658</td><td>658</td><td>665</td><td>665</td><td>665</td><td>665</td><td>665</td><td>650</td><td>650</td><td>650</td><td>654</td><td>658</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>685</td><td>700</td><td>700</td><td>700</td><td>700</td><td>670</td><td>670</td><td>670</td><td>670</td><td>670</td><td>640</td><td>670.26</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Mumbai (CC)</td><td>700</td><td>705</td><td>710</td><td>715</td><td>715</td><td>715</td><td>705</td><td>705</td><td>705</td><td>695</td><td>695</td><td>700</td><td>710</td><td>720</td><td>725</td><td>730</td><td>730</td><td>730</td><td>710</td><td>710</td><td>720</td><td>730</td><td>740</td><td>745</td><td>745</td><td>735</td><td>725</td><td>710</td><td>710</td><td>710</td><td>710</td><td>716.45</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Mysuru</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>680</td><td>685</td><td>690</td><td>690</td><td>690</td><td>690</td><td>690</td><td>690</td><td>695</td><td>701</td><td>706</td><td>706</td><td>706</td><td>706</td><td>706</td><td>706</td><td>706</td><td>706</td><td>706</td><td>688.87</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Namakkal</td><td>610</td><td>610</td><td>610</td><td>610</td><td>610</td><td>610</td><td>610</td><td>610</td><td>610</td><td>610</td><td>610</td><td>610</td><td>615</td><td>620</td><td>625</td><td>625</td><td>625</td><td>625</td><td>625</td><td>625</td><td>630</td><td>635</td><td>640</td><td>640</td><td>640</td><td>640</td><td>640</td><td>640</td><td>640</td><td>640</td><td>640</td><td>623.55</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Pune</td><td>700</td><td>705</td><td>710</td><td>715</td><td>715</td><td>715</td><td>705</td><td>705</td><td>705</td><td>705</td><td>705</td><td>705</td><td>705</td><td>715</td><td>720</td><td>725</td><td>725</td><td>725</td><td>715</td><td>715</td><td>725</td><td>735</td><td>740</td><td>740</td><td>740</td><td>730</td><td>725</td><td>715</td><td>715</td><td>715</td><td>705</td><td>716.77</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Raipur</td><td>670</td><td>680</td><td>685</td><td>685</td><td>685</td><td>680</td><td>665</td><td>640</td><td>640</td><td>641</td><td>655</td><td>655</td><td>665</td><td>680</td><td>680</td><td>685</td><td>700</td><td>665</td><td>665</td><td>660</td><td>680</td><td>701</td><td>701</td><td>701</td><td>680</td><td>670</td><td>660</td><td>650</td><td>655</td><td>655</td><td>640</td><td>670.13</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Surat</td><td>685</td><td>690</td><td>695</td><td>695</td><td>700</td><td>700</td><td>700</td><td>700</td><td>700</td><td>690</td><td>690</td><td>690</td><td>695</td><td>700</td><td>705</td><td>710</td><td>710</td><td>710</td><td>700</td><td>700</td><td>705</td><td>710</td><td>715</td><td>715</td><td>715</td><td>715</td><td>715</td><td>715</td><td>715</td><td>715</td><td>700</td><td>703.23</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Vijayawada</td><td>665</td><td>665</td><td>670</td><td>670</td><td>670</td><td>670</td><td>670</td><td>670</td><td>670</td><td>670</td><td>670</td><td>675</td><td>690</td><td>695</td><td>700</td><td>700</td><td>700</td><td>700</td><td>700</td><td>700</td><td>700</td><td>715</td><td>720</td><td>720</td><td>720</td><td>700</td><td>690</td><td>680</td><td>680</td><td>680</td><td>660</td><td>686.61</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Vizag</td><td>625</td><td>630</td><td>640</td><td>640</td><td>640</td><td>640</td><td>640</td><td>640</td><td>640</td><td>640</td><td>640</td><td>645</td><td>660</td><td>670</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>680</td><td>702</td><td>702</td><td>702</td><td>702</td><td>670</td><td>660</td><td>660</td><td>660</td><td>660</td><td>660</td><td>661.23</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>W.Godavari</td><td>635</td><td>640</td><td>645</td><td>645</td><td>650</td><td>650</td><td>650</td><td>650</td><td>650</td><td>650</td><td>650</td><td>655</td><td>665</td><td>670</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>675</td><td>680</td><td>690</td><td>695</td><td>695</td><td>695</td><td>665</td><td>665</td><td>665</td><td>665</td><td>665</td><td>620</td><td>663.06</td>                        </tr>
+                                                <tr align="center">
+                            <td align='left'>Warangal</td><td>637</td><td>642</td><td>647</td><td>653</td><td>653</td><td>653</td><td>653</td><td>653</td><td>653</td><td>653</td><td>653</td><td>653</td><td>658</td><td>663</td><td>668</td><td>673</td><td>673</td><td>673</td><td>652</td><td>652</td><td>662</td><td>672</td><td>677</td><td>677</td><td>677</td><td>677</td><td>652</td><td>652</td><td>652</td><td>652</td><td>632</td><td>657.97</td>                        </tr>
+                                                <tr>
+                            <td align="left" colspan="302 " style="font-weight: bold;  ">Prevailing Prices</td>
+                        </tr>
+                                                <tr align="center">
+                        <td align='left'>Allahabad (CC)</td><td>700</td><td>705</td><td>705</td><td>705</td><td>700</td><td>695</td><td>695</td><td>690</td><td>690</td><td>700</td><td>705</td><td>710</td><td>715</td><td>715</td><td>715</td><td>715</td><td>705</td><td>700</td><td>700</td><td>710</td><td>738</td><td>738</td><td>738</td><td>738</td><td>729</td><td>719</td><td>705</td><td>714</td><td>714</td><td>714</td><td>705</td><td>710.55</td>                        </tr>
+                                                <tr align="center">
+                        <td align='left'>Bhopal</td><td>670</td><td>670</td><td>680</td><td>680</td><td>680</td><td>680</td><td>680</td><td>670</td><td>660</td><td>660</td><td>670</td><td>675</td><td>690</td><td>695</td><td>700</td><td>700</td><td>690</td><td>690</td><td>660</td><td>670</td><td>700</td><td>710</td><td>710</td><td>710</td><td>710</td><td>690</td><td>680</td><td>660</td><td>660</td><td>660</td><td>660</td><td>681.29</td>                        </tr>
+                                                <tr align="center">
+                        <td align='left'>Indore (CC)</td><td>665</td><td>670</td><td>670</td><td>675</td><td>675</td><td>670</td><td>660</td><td>660</td><td>660</td><td>660</td><td>665</td><td>675</td><td>685</td><td>685</td><td>690</td><td>685</td><td>680</td><td>670</td><td>675</td><td>680</td><td>700</td><td>710</td><td>710</td><td>710</td><td>700</td><td>690</td><td>680</td><td>680</td><td>680</td><td>670</td><td>660</td><td>678.87</td>                        </tr>
+                                                <tr align="center">
+                        <td align='left'>Kanpur (CC)</td><td>690</td><td>695</td><td>695</td><td>695</td><td>695</td><td>695</td><td>695</td><td>681</td><td>681</td><td>695</td><td>695</td><td>710</td><td>710</td><td>710</td><td>710</td><td>710</td><td>690</td><td>690</td><td>690</td><td>700</td><td>733</td><td>733</td><td>733</td><td>733</td><td>733</td><td>714</td><td>695</td><td>705</td><td>705</td><td>695</td><td>695</td><td>703.42</td>                        </tr>
+                                                <tr align="center">
+                        <td align='left'>Luknow (CC)</td><td>714</td><td>714</td><td>714</td><td>714</td><td>714</td><td>714</td><td>714</td><td>707</td><td>707</td><td>717</td><td>717</td><td>733</td><td>733</td><td>733</td><td>733</td><td>733</td><td>714</td><td>714</td><td>714</td><td>733</td><td>750</td><td>762</td><td>762</td><td>762</td><td>752</td><td>733</td><td>714</td><td>723</td><td>723</td><td>714</td><td>714</td><td>725.65</td>                        </tr>
+                                                <tr align="center">
+                        <td align='left'>Muzaffurpur (CC)</td><td>720</td><td>725</td><td>730</td><td>730</td><td>730</td><td>730</td><td>710</td><td>710</td><td>710</td><td>715</td><td>715</td><td>730</td><td>735</td><td>735</td><td>735</td><td>735</td><td>735</td><td>720</td><td>720</td><td>740</td><td>760</td><td>765</td><td>765</td><td>765</td><td>735</td><td>735</td><td>735</td><td>735</td><td>735</td><td>710</td><td>700</td><td>730.65</td>                        </tr>
+                                                <tr align="center">
+                        <td align='left'>Nagpur</td><td>660</td><td>690</td><td>690</td><td>690</td><td>690</td><td>680</td><td>670</td><td>670</td><td>650</td><td>650</td><td>665</td><td>665</td><td>675</td><td>685</td><td>685</td><td>700</td><td>685</td><td>690</td><td>680</td><td>680</td><td>685</td><td>685</td><td>705</td><td>715</td><td>705</td><td>700</td><td>675</td><td>665</td><td>665</td><td>665</td><td>660</td><td>679.84</td>                        </tr>
+                                                <tr align="center">
+                        <td align='left'>Patna</td><td>720</td><td>725</td><td>730</td><td>730</td><td>730</td><td>730</td><td>710</td><td>710</td><td>710</td><td>715</td><td>715</td><td>730</td><td>735</td><td>735</td><td>735</td><td>735</td><td>735</td><td>720</td><td>720</td><td>740</td><td>760</td><td>765</td><td>765</td><td>765</td><td>735</td><td>735</td><td>735</td><td>735</td><td>735</td><td>710</td><td>700</td><td>730.65</td>                        </tr>
+                                                <tr align="center">
+                        <td align='left'>Ranchi  (CC)</td><td>704</td><td>704</td><td>714</td><td>714</td><td>714</td><td>714</td><td>714</td><td>724</td><td>724</td><td>724</td><td>724</td><td>724</td><td>724</td><td>752</td><td>752</td><td>752</td><td>738</td><td>724</td><td>724</td><td>738</td><td>762</td><td>762</td><td>762</td><td>762</td><td>752</td><td>747</td><td>733</td><td>733</td><td>733</td><td>714</td><td>705</td><td>731.19</td>                        </tr>
+                                                <tr align="center">
+                        <td align='left'>Varanasi (CC)</td><td>700</td><td>707</td><td>713</td><td>713</td><td>713</td><td>707</td><td>700</td><td>700</td><td>700</td><td>707</td><td>717</td><td>727</td><td>727</td><td>733</td><td>733</td><td>733</td><td>724</td><td>717</td><td>717</td><td>733</td><td>750</td><td>750</td><td>750</td><td>750</td><td>740</td><td>733</td><td>723</td><td>717</td><td>717</td><td>717</td><td>707</td><td>721.77</td>                        </tr>
+                                                </tr>
+                    </tbody>
+                </table>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+</body>
